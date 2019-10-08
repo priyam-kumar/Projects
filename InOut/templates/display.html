@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Student Database</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<img src="/static/logo.jpeg" width ="100" height="110" style="display:block;
+margin-left:auto;margin-right:auto" />
+<br />
+<h1 align="center">NATIONAL INSTITUTE OF TECHNOLOGY WARANGAL</h1>
+<table align="center" cellspacing="20">
+<tr>
+<form action="/saveRecord/" method="post">
+<input type="hidden" name="reg" value="{{std.registration_no}}">
+{% csrf_token %}
+<th>NAME:</th>
+<th>{{std.name}}</th>
+</tr>
+<tr>
+<th>REGISTRATION NO:</th>
+<th>{{std.registration_no}}</th>
+</tr>
+<tr>
+<th>CELL NO:</th>
+<th>{{std.contact}}</th>
+
+</tr>
+<tr>
+
+<th>PURPOSE:</th>
+<th><input type="text" name="purpose"></th>
+
+</tr>
+<tr>
+
+<th>PLACE OF VISIT:</th>
+<th><input type="text" name="place"></th>
+
+</tr>
+<tr>
+
+<th><input type="SUBMIT" align="middle" value="SUBMIT"></th>
+</form>
+</tr>
+</table>
+<br>
+
+
+
+</body>
+</html>

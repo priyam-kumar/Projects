@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head></head>
+<body>
+{% if a %}
+{% else %}
+
+<h1><center>Student Entry-Exit</center></h1>
+<img src="/static/logo.jpeg" style="display:block;
+margin-left:auto;margin-right:auto">
+  <form action="/" method="POST">
+    {%csrf_token%}
+    <center><input type="text" placeholder="Enter Registration No" name="registerid"></center>
+    <br>
+    <center><input type="submit" value="Scan ID"></center>
+  </form>
+{% endif %}
+</body>
+</html>
